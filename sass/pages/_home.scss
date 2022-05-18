@@ -1,0 +1,266 @@
+/* HOME PAGE */
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: calc(100vh - 90px); */
+    padding-top: 30px;
+}
+/* Services */
+#services {
+    .icon {
+        font-size: 32px;
+    }
+    .row .col-md-4 h3 {
+        transition: all 0.4s 0.2s;
+    }
+    .row .col-md-4 .icon {
+        transition: all 0.4s 0.1s;
+    }
+    .num {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+    .num + span {
+        font-size: $font-small;
+        font-weight: 400;
+    }
+}
+/* portfolio */
+.portfolio {
+    .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        li {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: $transition;
+        }
+        li.active,
+        li:hover {
+            color: $clr-main;
+        }
+    }
+    .col-sm-6.show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        animation: scale-up 0.5s ease-in-out;
+    }
+    .col-sm-6.hide {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    @keyframes scale-up {
+        0% {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0);
+        }
+        100% {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+/* Cleint */
+.client {
+    .container {
+        position: relative;
+        .card {
+            background: #fff;
+            padding: 30px;
+        }
+        &-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        img {
+            height: 10%;
+            width: 10%;
+            border-radius: 50%;
+            padding-right: 20px;
+        }
+        @media (max-width: 767px) {
+            .d-flex > div {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .slider-btn {
+            position: absolute;
+            top: 60%;
+            right: -5px;
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 767px) {
+                position: static;
+                flex-direction: row;
+                width: fit-content;
+                margin: auto;
+            }
+            button {
+                background-color: $clr-light;
+                padding: 10px;
+                border: none;
+                margin-bottom: 2px;
+                box-shadow: $box-shadow-1;
+                transition: $transition;
+                cursor: pointer;
+                &:hover {
+                    background-color: $clr-main;
+                    color: $clr-light;
+                }
+            }
+        }
+    }
+}
+/* pricing */
+.price {
+    @include small {
+        .box {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .row {
+        overflow: hidden;
+    }
+    .box {
+        transition: $transition;
+        transform: scale(1);
+        overflow: hidden;
+    }
+    .box .card:hover .top-part h3 {
+        border: 30px solid rgba(255, 255, 255, 0.21);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .card {
+        padding: 40px 20px;
+        background: #f9f9ff;
+        border-radius: 5px;
+        transition: $transition;
+        font-size: $font-small;
+
+        .top-part {
+            h3 {
+                font-weight: 300;
+                margin-left: auto;
+                margin-right: auto;
+                width: 140px;
+                height: 140px;
+                background-color: rgba(132, 144, 255, 0.1);
+                border-radius: 100px;
+                align-items: center;
+                display: grid;
+                border: 30px solid rgba(132, 144, 255, 0.1);
+                transition: $transition;
+            }
+            h4 {
+                margin-top: 20px;
+                text-transform: capitalize;
+                transition: $transition;
+            }
+            p {
+                margin-top: 10px;
+                transition: $transition;
+            }
+        }
+
+        ul {
+            padding-bottom: 30px;
+            padding-top: 15px;
+            li {
+                padding: 10px 0;
+                border-top: 1px solid #eee;
+                transition: $transition;
+            }
+        }
+        .footer-part {
+            font-size: 30px;
+        }
+    }
+    .box:hover {
+        transform: scale(1.05);
+        z-index: 2;
+    }
+    .box .card:hover {
+        background: $btn-main;
+    }
+    .box .card:hover h3,
+    .box .card:hover li,
+    .box .card:hover h4,
+    .box .card:hover p {
+        color: $clr-light;
+    }
+}
+/* latest */
+.latest {
+    .center-part {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+        }
+    }
+}
+/* brands */
+.brands {
+    img {
+        width: auto;
+    }
+}
+/* Footer */
+.footer {
+    h4 {
+        color: $clr-body;
+        font-weight: 500;
+    }
+    p {
+        color: #777777;
+        font-size: $font-small;
+    }
+    .input-group {
+        display: flex;
+    }
+    input {
+        border: none;
+        padding: 0.7rem 1rem;
+        outline: none;
+        width: 80%;
+    }
+    .btn {
+        padding: 0.7rem 1rem;
+    }
+}
+.clr-hover:hover .heading-hover {
+    color: $clr-main;
+}
+.heading-hover {
+    transition: $transition;
+}
+
+.top-part {
+    overflow: hidden;
+}
+
+.top-part img {
+    transition: transform 0.5s;
+    vertical-align: middle;
+    border-style: none;
+}
+.top-part:hover img {
+    transform: scale(1.2);
+}

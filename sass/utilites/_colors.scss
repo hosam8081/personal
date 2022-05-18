@@ -1,0 +1,24 @@
+$colors: (
+    "light" : $clr-light,
+    "main" : $clr-main,
+    "grediant" : $btn-main,
+    "muted" : $clr-muted,
+    "secondary": $clr-secondary,
+    "footer":$clr-footer,
+    "black-7":$clr-black-7
+ );
+
+@each $class, $color in $colors {
+    .text-#{$class} {
+        color: $color;
+    }
+}
+@each $class, $color in $colors {
+    .bg-#{$class} {
+        background: $color;
+    }
+}
+
+
+
+

@@ -1,0 +1,9 @@
+$colors : "primary" $clr-primary #fff,
+          "main" $btn-main #fff;
+
+@each $class, $background, $color in $colors {
+    .btn-#{$class} {
+        background-color: $background;
+        color:$color
+    }
+}

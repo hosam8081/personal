@@ -1,0 +1,46 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row > div {
+    padding-right:15px;
+    padding-left:15px;
+    width: 100%;
+}
+
+@include small {
+    @for $i from 1 to 12 {
+        .col-sm-#{$i} {
+            flex:0 0 100% / 12 * $i;
+            max-width: 100% / 12 * $i;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@include medium {
+    @for $i from 1 to 12 {
+        .col-md-#{$i} {
+            flex:0 0 100% / 12 * $i;
+            max-width: 100% / 12 * $i;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@include large {
+    @for $i from 1 to 12 {
+        .col-lg-#{$i} {
+            flex:0 0 100% / 12 * $i;
+            max-width: 100% / 12 * $i;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+

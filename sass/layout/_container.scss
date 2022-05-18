@@ -1,0 +1,33 @@
+.container {
+    width:100%;
+    padding-right: 15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+@include small {
+    .container {
+        width:540px;
+    }
+}
+@include medium {
+    .container {
+        width:720px;
+    }
+}
+@include large {
+    .container {
+        width:960px;
+    }
+}
+@include x-large {
+    .container {
+        width:1140px
+    }
+}
+@include xx-large {
+    .container {
+        width:1320px
+    }
+}

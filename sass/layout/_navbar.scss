@@ -1,0 +1,93 @@
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: $clr-body;
+    box-shadow: $box-shadow-1;
+    z-index:9999;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            color: $clr-black-2;
+        }
+        .navbar-nav {
+            display: flex;
+            @media (max-width: 991px) {
+                display: none;
+            }
+            li {
+                padding-right: 40px;
+                font-size:18px;
+                text-transform: uppercase;
+                font-size:12px;
+                font-weight: 500;
+                a {
+                    color: $clr-black-2;
+                    transition: $transition;
+                    &.active{
+                        color:$clr-main
+                    }
+                    &:hover{
+                        color:$clr-main
+                    }
+                }
+            }
+        }
+        .btn-toggler{
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            cursor: pointer;
+            @include large {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+.side-nav{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: rgba(0 ,0 ,0, 0.5);
+    padding: 20px;
+    transform:translate(-100%);
+    transition:$transition;
+   
+    &.show{
+        transform:translate(0);
+    }
+    ul{
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        li{
+            padding:15px;
+            a{
+                color:$clr-light;
+                font-size:$font-small;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .btn-close{
+        position: absolute;
+        right: 20px;
+        border: none;
+        background: transparent;
+        font-size: 29px;
+        cursor: pointer;
+    }
+}

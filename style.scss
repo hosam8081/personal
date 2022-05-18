@@ -1,0 +1,15 @@
+@import './sass/utilites/variables';
+@import "./sass/helpers/mixins";
+
+// layout 
+@import './sass/layout/global';
+@import './sass/layout/button';
+@import './sass/utilites/text';
+@import './sass/utilites/colors';
+@import './sass/layout/margin';
+@import './sass/layout/container';
+@import './sass/layout/grid';
+@import './sass/layout/navbar';
+
+// pages 
+@import './sass/pages/home'
